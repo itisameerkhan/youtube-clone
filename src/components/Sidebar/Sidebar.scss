@@ -4,13 +4,27 @@ $secondary-black-hover: #272727;
 
 .sidebar 
 {
-    width: 16%;
+    width: 230px;
     margin-top: 4.5rem;
     padding-left: 1rem;
     // border:2px solid red;
     height: 90vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding-right: 8px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color:transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: #717171;
+        }
+    }
 }
 .sb-home 
 {

@@ -19,6 +19,12 @@ import sports from '../../assets/youtube-svgs/svg33.svg';
 import learning from '../../assets/youtube-svgs/svg34.svg';
 import fashion from '../../assets/youtube-svgs/svg35.svg';
 import podcasts from '../../assets/youtube-svgs/svg36.svg';
+import youtubePremuim from '../../assets/youtube-svgs/svg37.svg';
+import youtubemusic from '../../assets/youtube-svgs/svg39.svg';
+import youtubekids from '../../assets/youtube-svgs/svg40.svg';
+import settings from '../../assets/youtube-svgs/svg41.svg';
+import help from '../../assets/youtube-svgs/svg43.svg';
+import feedback from '../../assets/youtube-svgs/svg44.svg';
 
 const Sidebar = () => {
 
@@ -27,7 +33,7 @@ const Sidebar = () => {
   if(!isMenuOpen) return <SideBarClose />;
 
   return (
-    <div className="sidebar">
+    <div className="sidebar"> 
         <div className="sb-cat-1">
           <div className="sb-icon sb-home">
             <img src={home} alt="home" />
@@ -104,6 +110,39 @@ const Sidebar = () => {
           <div className="sb-icon">
               <img src={podcasts} alt="podcasts" />
               <p>Podcasts</p>
+          </div>
+        </div>
+        <div className="sb-cat-1">
+          <p className="sb-cat-2-p">More from YouTube</p>
+          <div className="sb-icon">
+              <img src={youtubePremuim} alt="youtube" />
+              <p>YouTube Premium</p>
+          </div>
+          <div className="sb-icon">
+              <img src={youtubemusic} alt="youtube" />
+              <p>YouTube Music</p>
+          </div>
+          <div className="sb-icon">
+              <img src={youtubekids} alt="youtube" />
+              <p>YouTube Kids</p>
+          </div>
+        </div>
+        <div className="sb-cat-1">
+          <div className="sb-icon">
+              <img src={settings} alt="setting" />
+              <p>Settings</p>
+          </div>
+          <div className="sb-icon">
+              <img src={history} alt="report" />
+              <p>Report History</p>
+          </div>
+          <div className="sb-icon">
+              <img src={help} alt="help" />
+              <p>Help</p>
+          </div>
+          <div className="sb-icon">
+              <img src={feedback} alt="feedback" />
+              <p>Send feedback</p>
           </div>
         </div>
     </div>
