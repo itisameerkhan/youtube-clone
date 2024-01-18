@@ -3,7 +3,7 @@ import './VideoContainer.scss';
 const VideoContainer = () => {
   return (
     <div className="video-container">
-        <p>video container</p>
+        {/* <p>vid/eo container</p> */}
     </div>
   )
 }

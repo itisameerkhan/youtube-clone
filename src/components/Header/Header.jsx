@@ -6,12 +6,21 @@ import Bell from '../../assets/youtube-svgs/svg13.svg';
 import user from '../../assets/pfp-white.png';
 import search from '../../assets/youtube-svgs/svg10.svg';
 import mic from '../../assets/youtube-svgs/svg11.svg';
+import { useDispatch } from 'react-redux';
+import { toggleMenu } from '../../Redux/appSlice';
 
 const Header = () => {
+
+  const dispatch = useDispatch();
+
+  const  toggleMenuHandle = () => { dispatch(toggleMenu()); }
+
   return (
     <div className="header">
         <div className="header-1">
-          <div className="burger-icon">
+          <div 
+            className="burger-icon"
+            onClick={toggleMenuHandle}>
             <img src={burger} alt="burger-menu" className='header-icon' />
           </div>
           <img src={youtubeLogo} alt="youtube-logo" className='youtube-logo' />

@@ -1,0 +1,66 @@
+$primary-black: #0F0F0F;
+$secondary-black: #222222;
+$secondary-black-hover: #272727;
+
+.sidebar 
+{
+    width: 16%;
+    margin-top: 4.5rem;
+    padding-left: 1rem;
+    // border:2px solid red;
+    height: 90vh;
+    overflow: scroll;
+    padding-right: 8px;
+}
+.sb-home 
+{
+    background-color: $secondary-black-hover;
+}
+.sb-icon 
+{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    gap: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 100ms ease-in-out;
+
+    img 
+    {
+        width: 24px;
+        height: 24px;
+    }
+    p
+    {
+        font-size: 14px;
+    }
+
+    &:hover 
+    {
+        background-color: $secondary-black-hover;
+    }
+}
+.sb-cat-1 
+{
+    border-bottom: 2px solid $secondary-black-hover;
+    padding-bottom: 10px;
+}
+.sb-cat-2-p
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 0;
+
+    img 
+    {
+        height: 16px;
+        width: 16px;
+    }
+}
+.explore 
+{
+    padding: 1rem 0;
+}
+
