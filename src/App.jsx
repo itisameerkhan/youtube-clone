@@ -1,8 +1,13 @@
 import './App.scss';
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
 
 const App = () => {
   return (
-    <p>App</p>
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
   )
 }
 
