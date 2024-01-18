@@ -1,6 +1,7 @@
 
 $primary-black: #0F0F0F;
 $secondary-black: #222222;
+$secondary-black-hover: #414141;
 $primary-font: 'Roboto';
 
 .youtube-logo 
@@ -11,13 +12,26 @@ $primary-font: 'Roboto';
 {
     width: 1.6rem;
 }
+.burger-icon 
+{
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover 
+    {
+        background-color: $secondary-black-hover;
+    }
+}
 .header 
 {
     display: flex;
     color:white;
     justify-content: space-between;
     align-items: center;
-    padding:1rem 1.2rem;
+    padding:0.5rem 1.2rem;
+    padding-right: 2rem;
+    min-width: 350px;
 
     div 
     {
@@ -44,18 +58,23 @@ $primary-font: 'Roboto';
     justify-content: center;
     gap: 2rem;
 
-    .mic-div 
+    .mic-div
     {
         background-color: $secondary-black;
         padding: 0.5rem;
         border-radius: 50%;
-        border:1px solid gray;
+        border:1px solid $secondary-black-hover;
         cursor: pointer;
+
+        &:hover 
+        {
+            background-color: $secondary-black-hover;
+        }
     }
 }
 .search-input 
 {
-    border:1px solid gray;
+    border:1px solid $secondary-black-hover;
     display: flex;
     border-radius: 1.5rem;
     background-color: $secondary-black;
@@ -64,12 +83,13 @@ $primary-font: 'Roboto';
     {
         background-color: $primary-black;
         font-family: $primary-font;
-        width: 500px;
+        // width: 500px;
+        width: 33vw;
         height: 2.4rem;
         padding: 0.5rem 0 0.5rem 1rem;
         font-size: 1rem;
         border: none;
-        border-right:1px solid gray;
+        border-right:1px solid $secondary-black-hover;
         border-top-left-radius: 1.5rem;
         border-bottom-left-radius: 1.5rem;
         color:white;
@@ -83,5 +103,78 @@ $primary-font: 'Roboto';
     {
         padding:0 1rem;
         cursor: pointer;
+    }
+}
+.header-3 
+{
+    display: flex;
+    gap: 1.2rem;
+
+    .header-3-img
+    {
+        cursor: pointer;
+        padding:0.4rem;
+        // background-color: red;
+        border-radius: 50%;
+
+        &:hover 
+        {
+            background-color: $secondary-black-hover;
+        }
+    }
+    .res-search 
+    {
+        cursor: pointer;
+        width: 2.5rem;
+        padding: 0.4rem;
+        border-radius: 50%;
+
+        img 
+        {
+            width: 1.5rem;
+        }
+
+        &:hover 
+        {
+            background-color: $secondary-black-hover;
+        }
+    }
+    .user-icon 
+    {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+.res-search 
+{
+    display: none !important;
+}
+@media screen and (max-width:800px)
+{
+    .header-1
+    {
+        .burger-icon
+        {
+            display: none;
+        }
+    }
+    .header-2 
+    {        
+        div 
+        {
+            display: none;
+        }
+    }
+    .res-search 
+    {
+        display: grid !important;
+        margin-right: -0.2rem;
+        place-items: center;
+    }
+    .upload-icon 
+    {
+        display: none !important;
     }
 }
