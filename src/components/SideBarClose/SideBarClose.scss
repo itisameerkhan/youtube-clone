@@ -17,6 +17,7 @@ $secondary-black-hover: #272727;
     align-items: center;
     justify-content: center;
     // gap: 3rem;
+    z-index: 99;
 }
 .sbc-icon 
 {
@@ -45,5 +46,11 @@ $secondary-black-hover: #272727;
     &:hover 
     {
         background-color: $secondary-black-hover;
+    }
+}
+@media screen and (max-width: 500px) {
+    .sidebar-close, .sbc-org
+    {
+        display: none;
     }
 }

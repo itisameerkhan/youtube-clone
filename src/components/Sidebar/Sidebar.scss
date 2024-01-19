@@ -19,6 +19,8 @@ $secondary-black-hover: #272727;
     padding-right: 8px;
     position: fixed;
     top:4rem;
+    z-index: 99;
+    background-color: #0F0F0F;
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -84,4 +86,31 @@ $secondary-black-hover: #272727;
 {
     padding: 1rem 0;
 }
-
+.sb-res 
+{
+    display: none;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $primary-black;
+}
+.yt-add 
+{
+    font-weight: 100;
+    border:2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+@media screen and (max-width:500px)
+{
+    .sidebar, .sidebar-org
+    {
+        display: none;
+    }
+    .sb-res
+    {
+        display: flex;
+    }
+}

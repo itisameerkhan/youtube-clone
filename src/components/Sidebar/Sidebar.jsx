@@ -148,6 +148,27 @@ const Sidebar = () => {
           </div>
         </div>
     </div>
+    <div className="sb-res">
+      <div className="sbc-icon">
+            <img src={home} alt="home" className='sbc-img' />
+            <p>Home</p>
+        </div>
+        <div className="sbc-icon">
+            <img src={shorts} alt="home" className='sbc-img' />
+            <p>Shorts</p>
+        </div>
+        <div className="sbc-icon">
+        <span className="material-symbols-outlined yt-add">add</span>
+        </div>
+        <div className="sbc-icon">
+            <img src={subscriptions} alt="home" className='sbc-img' />
+            <p>Subscriptions</p>
+        </div>
+        <div className="sbc-icon">
+            <img src={settings} alt="home" className='sbc-img' />
+            <p>You</p>
+        </div>
+    </div>
     </>
   )
 }

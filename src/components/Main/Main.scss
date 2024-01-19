@@ -1,6 +1,19 @@
 .main 
 {
-    // position: absolute;
-    z-index: 99;
-    // border:2px solid red;
+    border:2px solid red;
+}
+@media screen and (max-width:1200px) {
+    .main 
+    {
+        margin-right: 1.5rem;
+        border:2px solid yellow;
+    }
+}
+@media screen and (max-width: 500px) {
+    .main 
+    {
+        padding:0;
+        margin: 0;
+        width: 100vw !important;
+    }
 }

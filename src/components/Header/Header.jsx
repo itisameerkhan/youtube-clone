@@ -1,6 +1,5 @@
 import './Header.scss';
 import youtubeLogo from '../../assets/youtube-logo.svg';
-import upload from '../../assets/upload.svg';
 import burger from '../../assets/youtube-svgs/svg6.svg';
 import Bell from '../../assets/youtube-svgs/svg13.svg';
 import user from '../../assets/pfp-white.png';
@@ -8,6 +7,7 @@ import search from '../../assets/youtube-svgs/svg10.svg';
 import mic from '../../assets/youtube-svgs/svg11.svg';
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../../Redux/appSlice';
+import record from '../../assets/youtube-svgs/svgrecord.svg';
 
 const Header = () => {
 
@@ -43,7 +43,7 @@ const Header = () => {
             <img src={search} alt="search" className='header-icon' />
           </div>
           <div className="header-3-img upload-icon">
-          <img src={upload} alt="upload" className='header-icon' />
+          <img src={record} alt="upload" className='header-icon' />
           </div>
           <div className="header-3-img">
           <img src={Bell} alt="bell" className='header-icon' />
