@@ -10,11 +10,15 @@
 {
     background-color: #0F0F0F;
 }
+html 
+{
+    scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    // background-color: #717171;
+    background-color: #717171;
     border-radius: 6px; 
     height: 60px;
 }

@@ -1,0 +1,47 @@
+$secondary-black: #848484;
+
+.video-card 
+{
+    cursor: pointer;
+    // border:2px solid red;
+    width: 405px;
+}
+.thumbnail 
+{
+    height: 225px;
+    width: 400px;
+    border-radius: 10px;
+}
+.yt-profile
+{
+    height: 36px;
+    width: 36px;
+}
+.vc-inner 
+{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    text-overflow: ellipsis;
+
+    p {
+        font-weight: 100;
+    }
+}
+.title 
+{
+    height: 42px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.chl-name 
+{
+    color: $secondary-black;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.views 
+{
+    color: $secondary-black;
+    margin-top: 2px;
+}

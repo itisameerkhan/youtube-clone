@@ -19,7 +19,9 @@ const VideoContainer = () => {
 
   return (
     <div className="video-container">
-        <VideoCard info={videos[0]} />
+        {videos.map((data) => (
+          <VideoCard key={data} info={data} />
+        ))}
     </div>
   )
 }
