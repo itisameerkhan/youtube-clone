@@ -6,7 +6,6 @@ $secondary-black-hover: #272727;
 {
     height: 100vh;
     min-width: 230px;
-    border:5px solid white;
 }
 .sidebar 
 {
@@ -102,6 +101,7 @@ $secondary-black-hover: #272727;
     font-weight: 100;
     border-radius: 50%;
     padding: 10px;
+    border:2px solid white;
 }
 @media screen and (max-width:500px)
 {

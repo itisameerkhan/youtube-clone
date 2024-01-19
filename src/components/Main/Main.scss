@@ -1,6 +1,7 @@
 .main 
 {
     margin-right: 1.2rem;
+    // border:2px solid white;
 }
 
 @media screen and (max-width: 500px) {
@@ -8,6 +9,7 @@
     {
         padding:0;
         margin: 0;
-        // width: 100vw !important;
+        width: 100vw !important;
+        margin-top: 3.5rem;
     }
 }
