@@ -9,7 +9,7 @@ const ButtonList = () => {
   return (
     <>
     <div className="btn-list" 
-      style={{left: isMenuOpen ? '16.4rem' : '6.8rem', width: isMenuOpen ? '81vw' : '90vw'}}>
+      style={{left: isMenuOpen ? '16.4rem' : '6.8rem', width: isMenuOpen ? '81vw' : '91vw'}}>
         {youtubeTags.map((data) => (
           <p key={data} className={data}>{data}</p>
           ))}

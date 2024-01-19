@@ -5,20 +5,21 @@ $secondary-black-hover: #272727;
 .sidebar-org 
 {
     height: 100vh;
-    width: 230px;
+    min-width: 230px;
+    border:5px solid white;
 }
 .sidebar 
 {
     width: 230px;
     margin-top: 5px;
     padding-left: 1rem;
-    // border:2px solid red;
-    height: 90vh;
+    padding-top: 1rem;
+    height: 92.5vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-right: 8px;
     position: fixed;
-    top:4rem;
+    top:3rem;
     z-index: 99;
     background-color: #0F0F0F;
 
@@ -99,7 +100,6 @@ $secondary-black-hover: #272727;
 .yt-add 
 {
     font-weight: 100;
-    border:2px solid white;
     border-radius: 50%;
     padding: 10px;
 }

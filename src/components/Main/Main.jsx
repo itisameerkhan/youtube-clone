@@ -8,7 +8,7 @@ const Main = () => {
   const isMenuOpen = useSelector(store => store.app.isMenuOpen);
 
   return (
-    <div className="main" style={{width: isMenuOpen ? '81vw' : '90vw'}}>
+    <div className="main" style={{width: isMenuOpen ? '81vw' : '91vw'}}>
         <ButtonList />
         <VideoContainer />
     </div>
