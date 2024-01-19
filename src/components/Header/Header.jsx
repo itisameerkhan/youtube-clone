@@ -16,6 +16,8 @@ const Header = () => {
   const  toggleMenuHandle = () => { dispatch(toggleMenu()); }
 
   return (
+    <>
+    <div className="header-org"></div>
     <div className="header">
         <div className="header-1">
           <div 
@@ -49,6 +51,7 @@ const Header = () => {
           <img src={user} alt="" className='header-icon user-icon' />
         </div>
     </div>
+    </>
   )
 }
 

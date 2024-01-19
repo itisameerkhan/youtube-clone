@@ -6,6 +6,8 @@ import you from '../../assets/youtube-svgs/svg17.svg';
 
 const SideBarClose = () => {
   return (
+    <>
+    <div className="sbc-org"></div>
     <div className="sidebar-close">
         <div className="sbc-icon">
             <img src={home} alt="home" className='sbc-img' />
@@ -24,6 +26,7 @@ const SideBarClose = () => {
             <p>You</p>
         </div>
     </div>
+    </>
   )
 }
 

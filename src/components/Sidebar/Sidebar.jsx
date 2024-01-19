@@ -33,7 +33,9 @@ const Sidebar = () => {
   if(!isMenuOpen) return <SideBarClose />;
 
   return (
-    <div className="sidebar"> 
+    <>
+    <div className="sidebar-org"></div>
+      <div className="sidebar"> 
         <div className="sb-cat-1">
           <div className="sb-icon sb-home">
             <img src={home} alt="home" />
@@ -146,6 +148,7 @@ const Sidebar = () => {
           </div>
         </div>
     </div>
+    </>
   )
 }
 
