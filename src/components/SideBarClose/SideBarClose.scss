@@ -11,12 +11,15 @@ $secondary-black-hover: #272727;
 {
     width: 77px;
     position: fixed;
-    top: 4rem;
+    top: 3.5rem;
     display: flex;
+    padding-top: 6px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     // gap: 3rem;
+    background-color: $primary-black;
+    height: 92vh;
     z-index: 99;
 }
 .sbc-icon 

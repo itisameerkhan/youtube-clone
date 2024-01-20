@@ -10,6 +10,8 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 10px;
     row-gap: 30px;
+
+    a { text-decoration: none; }
 }
 @media screen and (max-width:1360px) {
     .video-container
