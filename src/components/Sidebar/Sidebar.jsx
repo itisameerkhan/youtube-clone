@@ -25,6 +25,7 @@ import youtubekids from '../../assets/youtube-svgs/svg40.svg';
   import settings from '../../assets/youtube-svgs/svg41.svg';
 import help from '../../assets/youtube-svgs/svg43.svg';
 import feedback from '../../assets/youtube-svgs/svg44.svg';
+import { useEffect, useState } from 'react';
 
 const Sidebar = () => {
 

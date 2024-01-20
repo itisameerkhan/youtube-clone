@@ -4,12 +4,20 @@ $secondary-black: #848484;
 {
     cursor: pointer;
     // border:2px solid red;
-    width: 405px;
+    // width: 405px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+     
+    p { font-size: 1vw; }
 }
 .thumbnail 
 {
-    height: 225px;
+    // height: 225px;
+    max-height: 225px;
+    height: auto;
     width: 400px;
+    max-width: 100%;
     border-radius: 10px;
 }
 .yt-profile
@@ -30,8 +38,10 @@ $secondary-black: #848484;
 }
 .title 
 {
-    height: 42px;
+    max-height: 41px;
     text-overflow: ellipsis;
+    overflow: hidden;
+    width: 350px;
     overflow: hidden;
 }
 .chl-name 
@@ -44,4 +54,43 @@ $secondary-black: #848484;
 {
     color: $secondary-black;
     margin-top: 2px;
+}
+@media screen and (max-width: 1210px)
+{
+    .video-card p
+    {
+        font-size: 1.2vw;
+    }   
+}
+@media screen and (max-width:800px) {
+    .video-card 
+    {
+        p { font-size: 2vw; }
+    }
+}
+@media screen and (max-width:500px) {
+    .video-card 
+    {
+        p { font-size: 3vw; }
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumbnail {
+        height: 205px;
+        width: 370px;
+    }
+    .vc-inner 
+    {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title 
+    {
+        width: 90%;
+    }
 }
