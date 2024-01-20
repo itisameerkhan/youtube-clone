@@ -48,7 +48,7 @@ To run NetflixGPT locally and start exploring its features, follow these steps:
 2. **Navigate to the project directory:**
 
    ```bash
-   cd netflix-gpt
+   cd youtube-clone
    
 3. **Install the required dependencies:**
 
