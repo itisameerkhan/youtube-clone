@@ -5,14 +5,18 @@ import Bell from '../../assets/youtube-svgs/svg13.svg';
 import user from '../../assets/pfp-white.png';
 import search from '../../assets/youtube-svgs/svg10.svg';
 import mic from '../../assets/youtube-svgs/svg11.svg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu } from '../../Redux/appSlice';
 import record from '../../assets/youtube-svgs/svgrecord.svg';
 import { Link } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar'
+import { useState } from 'react';
+import { setProgress } from '../../Redux/appSlice';
 
 const Header = () => {
 
   const dispatch = useDispatch();
+  const progress = useSelector(store => store.app.progress);
 
   const  toggleMenuHandle = () => { dispatch(toggleMenu()); }
 
@@ -20,6 +24,11 @@ const Header = () => {
     <>
     <div className="header-org"></div>
     <div className="header">
+    <LoadingBar
+        color='#f11946'
+        progress={progress}
+        onLoaderFinished={() => dispatch(setProgress(0))}
+      />
         <div className="header-1">
           <div 
             className="burger-icon"

@@ -4,6 +4,7 @@ const appSlice = createSlice({
     name: 'app',
     initialState: {
         isMenuOpen: true,
+        progress: 0,
     },
     reducers:  {
         toggleMenu: (state) => {
@@ -11,9 +12,12 @@ const appSlice = createSlice({
         },
         closeMenu: (state) => {
             state.isMenuOpen = false;
+        },
+        setProgress: (state, action) => {
+            state.progress = action.payload;
         }
     },
 })
 
-export const { toggleMenu, closeMenu } = appSlice.actions;
+export const { toggleMenu, closeMenu, setProgress } = appSlice.actions;
 export default appSlice.reducer;

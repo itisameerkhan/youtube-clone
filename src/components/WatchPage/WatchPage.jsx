@@ -2,12 +2,15 @@ import { useEffect } from 'react';
 import './WatchPage.scss';
 import { useDispatch } from 'react-redux';
 import { closeMenu } from '../../Redux/appSlice';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import useProgress from '../../hooks/useProgress';
 
 const WatchPage = () => {
 
     const dispatch = useDispatch();
     const [searchParams] = useSearchParams();
+
+    useProgress();
 
     console.log(searchParams.get("v"));
 
