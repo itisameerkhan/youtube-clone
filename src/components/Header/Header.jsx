@@ -8,6 +8,7 @@ import mic from '../../assets/youtube-svgs/svg11.svg';
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../../Redux/appSlice';
 import record from '../../assets/youtube-svgs/svgrecord.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -25,7 +26,9 @@ const Header = () => {
             onClick={toggleMenuHandle}>
             <img src={burger} alt="burger-menu" className='header-icon' />
           </div>
-          <img src={youtubeLogo} alt="youtube-logo" className='youtube-logo' />
+          <Link  to={'/'}>
+            <img src={youtubeLogo} alt="youtube-logo" className='youtube-logo' />
+          </Link>
         </div>
         <div className="header-2">
           <div className="search-input">

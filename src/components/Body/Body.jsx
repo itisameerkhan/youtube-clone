@@ -1,12 +1,13 @@
 import './Body.scss';
 import Sidebar from '../Sidebar/Sidebar';
-import Main from '../Main/Main';
+import { Outlet } from 'react-router-dom';
+import WatchPage from '../WatchPage/WatchPage';
 
 const Body = () => {
   return (
     <div className="body">
         <Sidebar />
-        <Main />
+        <Outlet />
     </div>
   )
 }
