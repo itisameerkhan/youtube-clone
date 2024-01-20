@@ -1,0 +1,15 @@
+$skeleton-bg: #3F3F3F;
+
+.shimmer-lw 
+{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+
+    div 
+    {
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
