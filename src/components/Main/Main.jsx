@@ -8,7 +8,7 @@ const Main = () => {
 
   const isMenuOpen = useSelector(store => store.app.isMenuOpen);
 
-  useProgress();
+  // useProgress();
 
   return (
     <div className="main" style={{width: isMenuOpen ? '81vw' : '91vw'}}>

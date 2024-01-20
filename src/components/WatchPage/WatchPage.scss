@@ -1,6 +1,145 @@
+$primary-gradient: #494949;
+$secondary-black: #7E7E7E;
+$secondary-black-1: #373737;
+
 .watch 
 {
     height: 100vh;
-    width: 100%;
+    width: 92vw;
     position: absolute;
+    margin-left: 100px;
+}
+.watch-in 
+{
+    width: 65%;
+}
+.iframe 
+{
+    // height: 514px;
+    // width: 915px;
+    width: 100%;
+    height: auto;
+    // height: auto;
+    aspect-ratio: 16/9;
+    // padding-bottom: 50%;
+    margin-top: 1.2rem;
+    border-radius: 10px;
+    box-shadow:0px 0px 50px 2px $primary-gradient;
+}
+.watch-title 
+{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.yt-channel-pp 
+{
+    height: 40px;
+    width: 40px;
+}
+.watch-inner-1-left 
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    border:2px solid red;
+    width: 50%;
+}
+.wn1l 
+{
+    .subs{
+        color:$secondary-black;
+        font-size: 14px;
+        margin: 5px 0;
+        font-weight: 200;
+    }
+}
+.subs-btn
+{
+    background-color: white;
+    color:black;
+    font-family: 'Roboto';
+    border:none;
+    width: 95px;
+    height: 36px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: .9rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover 
+    {
+        background-color: rgb(210, 209, 209);
+    }
+}
+.clicked 
+{
+    background-color: $secondary-black-1;
+    color:white;
+    width: 110px;
+     
+    &:hover 
+    {
+        background-color: $secondary-black-1;
+    }
+}
+.watch-inner-1 
+{
+    border:2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.watch-inner-right 
+{
+    display: flex;
+    border:2px solid red;
+    width: 50%;
+}
+.likes 
+{
+    display: flex;
+    width: 100px;
+
+    button 
+    {
+        background-color: $secondary-black-1;
+        border:none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:7px 15px; 
+        // min-width: 52px;
+        font-family: 'Roboto';
+        cursor: pointer;
+
+        &:nth-child(1) 
+        {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            display: flex;
+            gap: 5px;
+            border-right: 1px solid gray;
+        }
+        &:nth-child(2) 
+        {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;   
+        }
+        &:hover 
+        {
+            background-color: $secondary-black;
+        }
+    }
+}
+.yt-svg 
+{
+    height: 25px;
+}
+.yt-btn 
+{
+    background-color: $secondary-black-1;
 }
