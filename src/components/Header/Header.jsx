@@ -60,6 +60,7 @@ const Header = () => {
     <LoadingBar
         color='#f11946'
         progress={progress}
+        loaderSpeed={2000}
         onLoaderFinished={() => dispatch(setProgress(0))}
       />
         <div className="header-1">

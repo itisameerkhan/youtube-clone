@@ -5,6 +5,7 @@ import VideoCard from '../VideoCard/VideoCard';
 import { useSelector } from 'react-redux';
 import Shimmer from '../Shimmer/Shimmer';
 import { Link } from 'react-router-dom';
+import useProgress from '../../hooks/useProgress';
 
 const VideoContainer = () => {
 
@@ -14,6 +15,8 @@ const VideoContainer = () => {
   useEffect(() => {
     getVideos();
   },[]);
+
+  useProgress();
 
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API);

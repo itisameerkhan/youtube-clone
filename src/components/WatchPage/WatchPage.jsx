@@ -10,7 +10,6 @@ import dislike from '../../assets/youtube-svgs/dislike.svg';
 import share from '../../assets/youtube-svgs/share.svg';
 import download from '../../assets/youtube-svgs/download.svg';
 import dots from '../../assets/youtube-svgs/dots.svg';
-import CommentsContainer from '../CommentContainer/CommentsContainer';
 
 const WatchPage = () => {
 
@@ -107,7 +106,6 @@ const WatchPage = () => {
                     <p className="yt-ds" dangerouslySetInnerHTML={{__html: data?.snippet?.description}}></p>
                 </div>
             </div>
-            <CommentsContainer />
         </div>
     )
 }
