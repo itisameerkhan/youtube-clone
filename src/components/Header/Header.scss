@@ -88,6 +88,7 @@ $primary-font: 'Roboto';
     display: flex;
     border-radius: 1.5rem;
     background-color: $secondary-black;
+    position: relative;
 
     input 
     {
@@ -114,6 +115,44 @@ $primary-font: 'Roboto';
         padding:0 1rem;
         cursor: pointer;
     }
+}
+.search-suggestions 
+{
+    position: absolute;
+    top:2.8rem;
+    left: 1.2rem;
+    width: 87.5%;
+    background-color: $secondary-black;
+    z-index: 1;
+    font-family: $primary-font;
+    border-radius: 10px;
+    padding:0 !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px;
+
+    ul 
+    {
+        padding-top: 0.8rem;
+        padding-bottom: 1.2rem;
+        width: 100%;
+    }
+    ul li 
+    {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        // margin: 10px 0;
+        padding: 0.5rem 0 0.5rem 1rem;
+        width: 100%;
+
+        &:hover 
+        {
+            background-color: $secondary-black-hover;
+        }
+    }
+}
+.hi-search 
+{
+    height: 20px;
 }
 .header-3 
 {

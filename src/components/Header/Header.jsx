@@ -20,6 +20,7 @@ const Header = () => {
   const progress = useSelector(store => store.app.progress);
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestion, setShowSuggestion] = useState(false);
 
   useEffect(() => {
 
@@ -65,9 +66,21 @@ const Header = () => {
             <input 
               type="text" 
               placeholder='Search'
-              onChange={(e) => setSearchQuery(e.target.value)} />
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setShowSuggestion(true)}
+              onBlur={() => setShowSuggestion(false)} />
             <div className="search-div">
             <img src={search} alt="search" className='header-icon' />
+            </div>
+            <div className="search-suggestions" style={{display: (showSuggestion && suggestions.length != 0 ) ? 'block' : 'none'}}>
+              <ul>
+                {suggestions.map((data) => (
+                  <li key={data}>
+                    <img src={search} className='header-icon hi-search' alt="icon" />
+                    {data}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className="mic-div">
