@@ -24,7 +24,7 @@ $secondary-black-1: #373737;
     // padding-bottom: 50%;
     margin-top: 1.2rem;
     border-radius: 10px;
-    box-shadow:0px 0px 50px 2px $primary-gradient;
+    // box-shadow:0px 0px 50px 2px $primary-gradient;
 }
 .watch-title 
 {
@@ -222,4 +222,27 @@ $secondary-black-1: #373737;
     {
         width: 95vw;
     }
+    .yt-desc 
+    {
+        width: 95vw;
+    }
+}
+.yt-desc 
+{
+    background-color: $secondary-black-1;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding:10px;
+
+    div 
+    {
+        display: flex;
+        gap: 20px;
+    }
+}
+.yt-ds 
+{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 10px;
 }

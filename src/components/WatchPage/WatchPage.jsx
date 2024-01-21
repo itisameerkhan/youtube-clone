@@ -27,14 +27,13 @@ const WatchPage = () => {
         else if(num >= 1000 && num <= 999999) return Math.round(num/1000) + 'K';
         else if(num >= 1000000 && num <= 999999999) return Math.round(num/1000000) + 'M';
     }
-
     // console.log(searchParams.get("v"));
 
     const getVideosById = async () => {
         const datas = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${searchParams.get('v')}&key=${import.meta.env.VITE_GOOGLE_API}`);
         const json = await datas.json();
         channelId = json.items[0]?.snippet?.channelId;
-        console.log(json.items[0]);
+        // console.log(json.items[0]);
         setData(json.items[0]);
     }
 
@@ -43,7 +42,7 @@ const WatchPage = () => {
         const datas = await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${import.meta.env.VITE_GOOGLE_API}`);
         const json = await datas.json();
         setChannelData(json.items[0]);
-        console.log(json.items[0]);
+        // console.log(json.items[0]);
         // console.log(json);
     }
 
@@ -98,6 +97,13 @@ const WatchPage = () => {
                             <button className='yts-btn dt-btn'><img src={dots} alt="" className='y-svg' /></button>
                     </div>
                     </div>
+                </div>
+                <div className="yt-desc">
+                    <div className="yt-desc-1">
+                        <p>{(Number(data?.statistics?.viewCount)).toLocaleString('en-US')} views</p>
+                        <p>{(data?.snippet?.publishedAt)}</p>
+                    </div>
+                    <p className="yt-ds" dangerouslySetInnerHTML={{__html: data?.snippet?.description}}></p>
                 </div>
             </div>
         </div>

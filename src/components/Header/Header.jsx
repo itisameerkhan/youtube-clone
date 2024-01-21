@@ -10,13 +10,34 @@ import { toggleMenu } from '../../Redux/appSlice';
 import record from '../../assets/youtube-svgs/svgrecord.svg';
 import { Link } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { setProgress } from '../../Redux/appSlice';
+import { YOUTUBE_SEARCH_API } from '../../utils/constants';
 
 const Header = () => {
 
   const dispatch = useDispatch();
   const progress = useSelector(store => store.app.progress);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      getSearchSuggestions();
+      // console.log(searchQuery);
+    }, 200);
+    
+    return () => clearTimeout(timer);
+
+  },[searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const json = await data.json();
+    // console.log(json[1]);
+    setSuggestions(json[1]);
+  }
 
   const  toggleMenuHandle = () => { dispatch(toggleMenu()); }
 
@@ -41,7 +62,10 @@ const Header = () => {
         </div>
         <div className="header-2">
           <div className="search-input">
-            <input type="text" placeholder='Search' />
+            <input 
+              type="text" 
+              placeholder='Search'
+              onChange={(e) => setSearchQuery(e.target.value)} />
             <div className="search-div">
             <img src={search} alt="search" className='header-icon' />
             </div>
