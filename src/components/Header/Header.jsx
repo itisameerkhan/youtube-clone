@@ -13,6 +13,7 @@ import LoadingBar from 'react-top-loading-bar'
 import { useEffect, useState } from 'react';
 import { setProgress } from '../../Redux/appSlice';
 import { YOUTUBE_SEARCH_API } from '../../utils/constants';
+import { cacheResults } from '../../Redux/searchSlice';
 
 const Header = () => {
 
@@ -21,11 +22,17 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const searchCache = useSelector(store => store.search);
 
   useEffect(() => {
 
     const timer = setTimeout(() => {
-      getSearchSuggestions();
+
+      if(searchCache[searchQuery]) {
+        setShowSuggestion(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
       // console.log(searchQuery);
     }, 200);
     
@@ -37,7 +44,11 @@ const Header = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     // console.log(json[1]);
+    // console.log('API CALL -> ', searchQuery);
     setSuggestions(json[1]);
+    dispatch(cacheResults({
+      [searchQuery] : json[1]
+     }));
   }
 
   const  toggleMenuHandle = () => { dispatch(toggleMenu()); }
@@ -72,7 +83,7 @@ const Header = () => {
             <div className="search-div">
             <img src={search} alt="search" className='header-icon' />
             </div>
-            <div className="search-suggestions" style={{display: (showSuggestion && suggestions.length != 0 ) ? 'block' : 'none'}}>
+            <div className="search-suggestions" style={{display: (showSuggestion && suggestions.length != 0 && searchQuery != "" ) ? 'block' : 'none'}}>
               <ul>
                 {suggestions.map((data) => (
                   <li key={data}>
