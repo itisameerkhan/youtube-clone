@@ -8,6 +8,8 @@ import profile from '../../assets/youtube-svgs/defaultpfp.svg';
 import like from '../../assets/youtube-svgs/like.svg';
 import dislike from '../../assets/youtube-svgs/dislike.svg';
 import share from '../../assets/youtube-svgs/share.svg';
+import download from '../../assets/youtube-svgs/download.svg';
+import dots from '../../assets/youtube-svgs/dots.svg';
 
 const WatchPage = () => {
 
@@ -63,7 +65,7 @@ const WatchPage = () => {
                     className='iframe'
                     width="560" 
                     height="315" 
-                    src={`https://www.youtube.com/embed/${searchParams.get("v")} `}
+                    src={`https://www.youtube.com/embed/${searchParams.get("v")}?&rel=0`}
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -72,25 +74,29 @@ const WatchPage = () => {
                 <div className="watch-inner">
                     <p className="watch-title">{data?.snippet?.title}</p>
                     <div className="watch-inner-1">
-                        <div className="watch-inner-1-left">
+                    <div className="watch-inner-left">
+                            <div className='wainner-l1'>
                             <img src={profile} alt="pfp" className='yt-channel-pp' />
                             <div className="wn1l">
                                 <p className="channel-title">{data?.snippet?.channelTitle}</p>
                                 <p className="subs">{formatNumbers(channelData?.statistics?.subscriberCount)} subscribers</p>
+                            </div>
                             </div>
                             <button 
                                 className= {`subs-btn ${info.btn ? 'clicked' : 'none'}`}
                                 onClick={() => setInfo({...info, btn: !info.btn})}>
                                 {info.btn ? 'Subscribed' : 'Subscribe'}
                             </button>
-                        </div>
-                        <div className="watch-inner-right">
+                    </div>
+                    <div className="watch-inner-right">
                             <div className="likes">
-                               <button><img src={like} alt="like" className='yt-svg' /> {formatNumbers(data?.statistics?.likeCount)}</button>
-                              <button><img src={dislike} alt="dislike" className='yt-svg' /></button>
+                               <button><img src={like} alt="like" className='y-svg' /> {formatNumbers(data?.statistics?.likeCount)}</button>
+                              <button><img src={dislike} alt="dislike" className='y-svg' /></button>
                             </div>
-                            <button className='yt-btn'><img src={share} className='yt-svg' alt="" /></button>
-                        </div>
+                            <button className='yts-btn'><img src={share} className='y-svg' alt="" />Share</button>
+                            <button className="yts-btn d-btn"><img src={download} className='y-svg' alt="" />Download</button>
+                            <button className='yts-btn dt-btn'><img src={dots} alt="" className='y-svg' /></button>
+                    </div>
                     </div>
                 </div>
             </div>

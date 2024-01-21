@@ -29,7 +29,11 @@ $secondary-black: #848484;
 {
     margin-top: 10px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    width: 100%;
+    // width: 100vw;
+    align-items: center;
+    justify-content: start;
     text-overflow: ellipsis;
 
     p {
@@ -84,10 +88,11 @@ $secondary-black: #848484;
     }
     .vc-inner 
     {
-        gap: 10px;
+        gap: 15px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
+        margin-left: 1rem;
     }
     .title 
     {
