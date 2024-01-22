@@ -1,0 +1,21 @@
+.live-chat
+{
+    border:1px solid gray;
+    height: 85%;
+    border-radius: 10px;
+    margin: 1.2rem;
+    font-family: 'Roboto';
+    overflow: scroll;
+} 
+.lc-title 
+{
+    border-bottom:1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+.live-chat-inner 
+{
+    display: flex;
+    flex-direction: column-reverse;
+}

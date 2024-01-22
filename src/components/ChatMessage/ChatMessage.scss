@@ -1,0 +1,22 @@
+$secondary-black: #B7B7B7;
+
+.yt-channel-pp-1
+{
+    height: 24px;
+    width: 24px;
+}
+.chat-message 
+{
+    padding: 0.5rem 1rem .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lc-pp
+{
+    color: $secondary-black;
+}
+.lc-pp-m 
+{
+    font-weight: 100;
+}
