@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Body from './components/Body/Body';
 import { Provider } from 'react-redux';
 import appStore from './Redux/appStore';
-import { BrowserRouter as Router, Routes, Route, createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom';
+import { Routes, Route,BrowserRouter } from 'react-router-dom';
 import Main from './components/Main/Main';
 import WatchPage from './components/WatchPage/WatchPage';
 
