@@ -1,3 +1,5 @@
+$secondary-black: #272727;
+
 .live-chat
 {
     border:1px solid gray;
@@ -14,8 +16,54 @@
     text-align: center;
     padding: 1rem 2rem;
 }
+.lc-submit 
+{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding:0 1rem;
+    margin: 0 auto;
+
+    input 
+    {
+        width: 90%;
+        height: 35px;
+        padding:0 1.5rem;
+        border-radius: 20px;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        outline: none;
+        border:none;
+        background-color: $secondary-black;
+    }
+    button 
+    {
+        background-color: transparent;
+        border:none;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+
+        &:hover 
+        {
+            background-color: #272727;
+        }
+    }
+}
 .live-chat-inner 
 {
     display: flex;
     flex-direction: column-reverse;
+    height: 83%;
+    overflow: scroll;
+}
+@media screen and (max-width:500px) {
+    .live-chat
+    {
+        width: 90vw;
+    }
 }
