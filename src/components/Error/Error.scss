@@ -1,0 +1,23 @@
+.error 
+{
+    height: 80%;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    align-content: center;
+
+    p 
+    {
+        font-size: 2rem;
+    }
+}
+.error-svg 
+{
+    height: 200px;
+}
+@media screen and (max-width: 500px) {
+    .error 
+    {
+        height: 100vh;
+    }
+}

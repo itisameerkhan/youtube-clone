@@ -5,6 +5,7 @@ import VideoCard from '../VideoCard/VideoCard';
 import { useSelector } from 'react-redux';
 import Shimmer from '../Shimmer/Shimmer';
 import { Link } from 'react-router-dom';
+import Error from '../Error/Error';
 
 const VideoContainer = () => {
 
@@ -18,9 +19,13 @@ const VideoContainer = () => {
   // useProgress();
 
   const getVideos = async () => {
-    const data = await fetch(YOUTUBE_VIDEOS_API);
-    const json = await data.json();
-    setVideos(json.items);
+    try {
+      const data = await fetch(YOUTUBE_VIDEOS_API);
+      const json = await data.json();
+      setVideos(json.items);
+    } catch(e) {
+      setVideos({error: true})
+    }
   }
 
   if(videos.length === 0) return (
@@ -31,6 +36,8 @@ const VideoContainer = () => {
     </div>
   )
  
+  if(videos?.error) return <Error />
+
   return (
     <div 
       className="video-container"
