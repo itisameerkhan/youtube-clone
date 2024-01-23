@@ -10,10 +10,10 @@ const VideoContainer = () => {
 
   const [videos, setVideos] = useState([]);
   const isMenuOpen = useSelector(store => store.app.isMenuOpen);
-
   useEffect(() => {
     getVideos();
   },[]);
+
 
   // useProgress();
 
@@ -41,6 +41,7 @@ const VideoContainer = () => {
             <VideoCard info={data} />
           </Link>
         ))}
+        {Array.from({length: 7}).map((data, index) => <Shimmer key={index} />)}
     </div>
   )
 }

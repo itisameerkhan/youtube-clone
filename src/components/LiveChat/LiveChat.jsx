@@ -37,7 +37,11 @@ const LiveChat = () => {
             ))}
             </div>
             <form action="" className="lc-submit" onSubmit={handleSubmit}>
-                <input type="text" value={liveMessage} onChange={(e) => setLiveMessage(e.target.value) } />
+                <input  
+                    type="text" 
+                    value={liveMessage} 
+                    onChange={(e) => setLiveMessage(e.target.value) }
+                    placeholder='say something...' />
                 <button>
                     <span class="material-symbols-outlined">send</span>
                 </button>

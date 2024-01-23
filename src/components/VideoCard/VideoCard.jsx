@@ -14,13 +14,15 @@ const VideoCard = ({info}) => {
     const calculateDuration = (duration) => {
         const currentDate = new Date();
         const providedDate = new Date(duration);
-        const timeDifference = Math.round(new Date(currentDate - providedDate) / (1000 * 60 * 60 * 24));
-        if(timeDifference == 1) return '1 day ago';
-        else if(timeDifference >= 2 && timeDifference <= 31) return `${timeDifference} days ago`;
+        const timeDifference = (new Date(currentDate - providedDate) / (1000 * 60 * 60 * 24));
+
+        if(timeDifference <= 1) return `${Math.round(timeDifference * 24)} hours ago`
+        else if(timeDifference == 1) return '1 day ago';
+        else if(timeDifference >= 2 && timeDifference <= 31) return `${Math.round(timeDifference)} days ago`;
         else if(timeDifference >= 30 && timeDifference <= 61) return `1 month ago`;
         else if(timeDifference >= 60 && timeDifference <= 365) return `${Math.round(timeDifference/12)} months ago`;
         else if(timeDifference >= 365) return `${Math.round(timeDifference / 365)} years ago`; 
-        return timeDifference;
+        return `${Math.round(timeDifference)} days ago`;
     }
 
     return (
