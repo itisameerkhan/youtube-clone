@@ -28,7 +28,7 @@ const VideoCard = ({info}) => {
     return (
         <div className="video-card">
             <img 
-                src={info?.snippet?.thumbnails?.maxres?.url} 
+                src={info?.snippet?.thumbnails?.maxres?.url || info?.snippet?.thumbnails?.medium?.url} 
                 alt="thumbnail" 
                 className='thumbnail'
             />
